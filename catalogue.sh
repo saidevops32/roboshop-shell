@@ -10,7 +10,7 @@ N="\e[0m"
 TIMESTAMP=$(date +%F-%H-%M-%S)
 LOGFILE="/tmp/$0-$TIMESTAMP.log"
 
-MONGODB_HOST=mongodb.saidev.onine
+MONGODB_HOST=mongodb.saidev.online
 
 echo "script started excuting $TIMESTAMP" &>> LOGFILE
 
@@ -45,7 +45,7 @@ dnf install nodejs -y &>> $LOGFILE
 VALIDATE $? "INSTALING node.js" 
 
 id roboshop
-if [$? -ne 0]
+if [ $? -ne 0 ]
 then
    useradd roboshop 
    VALIDATE $? "ROBOSHOP USER CRESTION"
