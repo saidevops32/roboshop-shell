@@ -73,6 +73,10 @@ cd /app &>> $LOGFILE
 
 VALIDATE $? "CHANGING DIRECTORY" 
 
+npm install &>> $LOGFILE
+
+VALIDATE $? "installing dependencies" 
+
 cp /home/centos/roboshop-shell/catalogue.service /etc/systemd/system/catalogue.service &>> $LOGFILE
 
 VALIDATE $? "Coping catalogue.sevice file" 
