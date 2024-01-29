@@ -10,7 +10,7 @@ N="\e[0m"
 TIMESTAMP=$(date +%F-%H-%M-%S)
 LOGFILE="/tmp/$0-$TIMESTAMP.log"
 
-USER_HOST=user.saidev.online
+USER_HOST=mongodb.saidev.online
 
 echo "script started excuting $TIMESTAMP" &>> LOGFILE
 
